@@ -1,0 +1,21 @@
+{
+  "name": "fd-node-todo-api",
+  "version": "1.0.0",
+  "description": "expressjs todo API for dev.to",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.4.1"
+  },
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
