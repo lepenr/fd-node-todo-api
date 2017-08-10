@@ -1,12 +1,18 @@
 // Dependencies
 const express = require('express');
+const bodyParser = require('body-parser');
 
 // configs
 const port = process.env.PORT ||  3001;
 
 // ExpressJs Setup
 const app = express();
+app.use(bodyParser.json());
 
+//import main controller
+const routes = require('./routes'); 
+
+app.use(routes);
 
 // Starting up the server
 app.listen(port,  function() {
