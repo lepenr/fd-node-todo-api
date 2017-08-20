@@ -2,9 +2,9 @@ const express = require('express');
 const router = express.Router();
 
 const homeRoute = require('./home');
-const todosRoute = require('./v1/todos');
+const todosRoute = require('./api/todos');
 
 router.use('/', homeRoute);
-router.use('/v1/todos', todosRoute);
+router.use('/api/todos', todosRoute);
 
 module.exports = router;

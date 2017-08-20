@@ -9,7 +9,7 @@ const port = process.env.PORT ||  3001;
 const app = express();
 app.use(bodyParser.json());
 
-//import main controller
+//import main router
 const routes = require('./routes'); 
 
 app.use(routes);
