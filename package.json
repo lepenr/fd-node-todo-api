@@ -13,10 +13,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^4.4.1"
+    "eslint": "^4.5.0",
+    "mocha": "^3.5.0",
+    "sinon": "^3.2.1"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.4"
+    "express": "^4.15.4",
+    "mongoose": "^4.11.8"
   }
 }

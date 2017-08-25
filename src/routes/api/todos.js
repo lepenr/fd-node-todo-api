@@ -6,7 +6,7 @@ const inMemoryTodoDB = [
   {id:1,name:'Part II',description:'Write Part II', done:false}
 ];
 
-router.get('/',(req,res)=>{
+router.get('/',async (req,res)=>{
   res.status(200)
     .json(inMemoryTodoDB);
 });

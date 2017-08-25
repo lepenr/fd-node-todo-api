@@ -1,9 +1,13 @@
 // Dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
+const  mongoose = require('mongoose');
+
 
 // configs
-const port = process.env.PORT ||  3001;
+const configs = require('./configs');
+const port = process.env.PORT || configs.general.PORT || 3001;
+mongoose.Promise = global.Promise;
 
 // ExpressJs Setup
 const app = express();
@@ -13,6 +17,13 @@ app.use(bodyParser.json());
 const routes = require('./routes'); 
 
 app.use(routes);
+
+
+// start connection with mongodb
+mongoose.connect(configs.mongodb.HOST,{
+  useMongoClient: true,
+});
+
 
 // Starting up the server
 app.listen(port,  function() {

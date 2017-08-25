@@ -4,6 +4,10 @@ module.exports = {
         "node": true
     },
     "extends": "eslint:recommended",
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 8,
+    },
     "rules": {
         "no-console":0,
         "indent": [
@@ -22,5 +26,13 @@ module.exports = {
             "error",
             "always"
         ]
+    }, "globals": {
+        /* MOCHA */
+        "describe": false,
+        "it": false,
+        "before": false,
+        "beforeEach": false,
+        "after": false,
+        "afterEach": false
     }
 };
